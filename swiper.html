@@ -73,6 +73,46 @@
             background: olivedrab;
             width: 100px;
         }
+        .face-div{
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex-direction: column;
+            text-align: center;
+        }
+        .face{
+            width: 364px;
+            height: 364px;
+            background: url(images/face.jpg);
+            text-align: center;
+        }
+        /* .eyes{
+            margin: auto;
+        } */
+        .eyes:after,
+        .eyes:before {
+            width: 9px;
+            height: 15px;
+            background: #38393a;
+            position: absolute;
+            content: "";
+            left: 40%;
+            top: 142px;
+            border-radius: 45%;
+        }
+        .eyes:after {
+            left: 58%;
+        }
     </style>
     
 </head>
@@ -80,7 +120,16 @@
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">往下滑</div>
+            <div class="swiper-slide">
+                <div class="face-div">
+                    <div class="face">
+                        <div class="eyes"></div>
+                    </div>
+                    <div>往下滑</div>
+                </div>
+                
+                
+            </div>
             <div class="swiper-slide">
                     Slide 2
                 <div class="div">
