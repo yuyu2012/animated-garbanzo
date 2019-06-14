@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/anime.min.js"></script>
+    <style>
+        .div{
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            padding: 8% 0;
+            width: 90%;
+        }
+        .pic{
+            background: green;
+            position: relative;
+            width: calc((100% / 3) - 50px);
+            padding-bottom: 20px;
+            min-height: 80px;
+            margin: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+    </div>
+    <div class="div">
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+    </div>
+    <div class="div">
+        <div class="pic"></div>
+        <div class="pic"></div>
+        <div class="pic"></div>
+    </div>
+
+    <script>
+        anime({
+            targets: '.pic',
+            opacity: [0, 1],
+            scale : [.5, 1],
+            delay: anime.stagger(100) // 每个元素的延迟增加100毫秒。
+        });
+    </script>
+    
+</body>
+</html>
