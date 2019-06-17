@@ -177,7 +177,7 @@
 
    
 
-    <div class="swiper-container">
+    <div class="swiper-container swiper-container-out">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
 
@@ -191,8 +191,88 @@
                 
                 
             </div>
+
+
             <div class="swiper-slide">
-                    Slide 2
+
+                    <div class="swiper-container swiper-container-scrollbar">
+                            <div class="swiper-wrapper">  
+                                <div class="swiper-slide">
+                                        Slide 2<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                        1<br>
+                                </div>
+                            </div>
+                        </div>
+                   
+               
+            </div>
+
+
+
+            <div class="swiper-slide">
+                    Slide 3
                 <div class="div">
                     <div class="pic"></div>
                     <div class="pic"></div>
@@ -209,7 +289,7 @@
                     <div class="pic"></div>
                 </div>
             </div>
-            <div class="swiper-slide">Slide 3
+            <div class="swiper-slide">Slide 4
                     <div class="slide">    
                         <div class="slide__img">
                         </div>
@@ -230,11 +310,11 @@
     <script src="js/anime.min.js"></script>
 
     <script>
-        var mySwiper = new Swiper ('.swiper-container', {
+        var mySwiper = new Swiper ('.swiper-container-out', {
             direction: 'vertical', // 垂直切换选项
             on: {
                 slideChangeTransitionEnd: function(){ //切换结束时
-                    if(this.activeIndex==1){
+                    if(this.activeIndex==2){
                         anime({
                             targets: '.pic',
                             opacity: [0, 1],
@@ -242,7 +322,7 @@
                             delay: anime.stagger(100), // 每个元素的延迟增加100毫秒。
                         });
                     }
-                    else if(this.activeIndex==2){
+                    else if(this.activeIndex==3){
                         anime({
                             targets: '.slide__img',
                             opacity: [0, 1],
@@ -255,6 +335,13 @@
                 },
             }
         })
+
+        var swiperScrollbar = new Swiper('.swiper-container-scrollbar', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            nested: true,
+        });
         
     </script>
     
