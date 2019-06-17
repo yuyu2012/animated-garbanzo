@@ -96,9 +96,12 @@
             background: url(images/face.jpg);
             text-align: center;
         }
-        /* .eyes{
-            margin: auto;
-        } */
+        .eyes{
+            /* -moz-animation: blink 3s infinite;
+            -webkit-animation: blink 3s infinite; */
+            animation: blink 3s infinite;
+            margin-top: 142px;
+        }
         .eyes:after,
         .eyes:before {
             width: 9px;
@@ -107,11 +110,37 @@
             position: absolute;
             content: "";
             left: 40%;
-            top: 142px;
+            top: -5px;
             border-radius: 45%;
         }
         .eyes:after {
             left: 58%;
+        }
+        @keyframes blink {
+            0% {
+                transform: scaleY(1);
+            }
+            18% {
+                transform: scaleY(1);
+            }
+            20% {
+                transform: scaleY(0);
+            }
+            25% {
+                transform: scaleY(1);
+            }
+            38% {
+                transform: scaleY(1);
+            }
+            40% {
+                transform: scaleY(0);
+            }
+            45% {
+                transform: scaleY(1);
+            }
+            80% {
+                transform: scaleY(1);
+            }
         }
     </style>
     
